@@ -33,6 +33,8 @@ export default function About() {
                 gap="40px"
                 alignItems="center"
               >
+                {/* <Typography fontSize="40px">🐝 🍄 🐙 🪼</Typography> */}
+               
                 <Typography color="darkgrey">
                   Hrvatski Česky Dansk Nederlands English Eesti Filipino Suomi
                   Français ქართული Deutsch Ελληνικά ‫עברית हिन्दी Magyar
