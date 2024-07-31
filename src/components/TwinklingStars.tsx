@@ -1,13 +1,8 @@
+// TwinklingStars.tsx
 import React, { useEffect } from "react";
-import { Box } from "@mui/material";
-import Header from "./Header";
-import "./index.css"; // Ensure this CSS file is imported
+import "./Styles/TwinklingStars.css";
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const TwinklingStars: React.FC = () => {
   useEffect(() => {
     const generateTwinkleStar = () => {
       const twinkleStarTemplate = document.getElementById("twinkle-star");
@@ -25,6 +20,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         galaxy.appendChild(twinkleStar);
       }
 
+      console.log("Twinkle star added at:", twinkleStar.style.left, twinkleStar.style.top); // Debug line
+
       setTimeout(() => {
         twinkleStar.remove();
       }, 1500);
@@ -35,12 +32,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, []);
 
   return (
-    <div id="root">
-      <Header />
-      <Box className="content">{children}</Box>
+    <div>
       <div id="galaxy"></div>
+      <svg 
+        id="twinkle-star" 
+        className="template" 
+        width="10" 
+        height="10" 
+        viewBox="0 0 10 10" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ display: 'none' }} // Hide the template SVG
+      >
+        <circle cx="5" cy="5" r="2" fill="white"/>
+      </svg>
     </div>
   );
 };
 
-export default Layout;
+export default TwinklingStars;

@@ -1,19 +1,24 @@
-import React from "react";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/about"; // Example of another page
-import Layout from "./components/Layout";
+import About from "./components/About"; 
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Social from "./components/Social";
+
+
 
 const App = () => {
   return (
     <Router>
-      {/* <Layout> */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/project" element={<Projects />} />
+        <Route path="/experience" element={<Experience />} />
+         <Route path="/social" element={<Social />} />
           {/* Add other routes here */}
         </Routes>
-      {/* </Layout> */}
     </Router>
   );
 };
