@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; 
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: auto; 
+}
+
+.root {
+  background: radial-gradient(rgb(30, 30, 31), rgb(0, 0, 0));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20%;
+  margin-top: 10px; /* Adjusted to account for the fixed header */
+  min-height: 100vh; 
+  margin-bottom: 20px;
+}
+
+.profilePic {
+  margin-top: 10px;
+  border-radius: 25px;
+  border: 1px solid rgb(247, 244, 244);
+  box-shadow: 0 0 6px rgb(161, 158, 158);
+  height: 300px;
+  width: 300px;
+}
+
+.aboutBox {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+}
+
+.shake {
+  display: inline-block;
+  animation: shake 0.5s infinite;
+}
+
+.shake-stop {
+  animation: none;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Twinkling Stars */
+
+@keyframes twinkle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.template {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: twinkle 1s infinite;
+}
+
+.twinkle {
+  animation: twinkle 1s infinite;
+}
+
+#galaxy {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; /* Ensure it covers the viewport height */
+  pointer-events: none; /* Make sure it doesn't interfere with interactions */
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  
+  .profilePic {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    /* flex-direction: row; */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .content {
+    padding: 10%;
+    /* flex-direction: row;
+      margin-top: 30px; */
+    /* height: calc(100% - 60px); Adjust based on header height */
+  }
+
+  .profilePic {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .content {
+    flex-direction: column;
+     padding: 10%;
+     margin-top: 50px;
+     /* margin-bottom: 70px; */
+    /* height: calc(100% - 60px); Adjust based on header height */
+  }
+
+  .profilePic {
+    height: 50%;
+    width: 50%;
+  }
+
+  .aboutBox {
+    flex-direction: column;
+     align-items: center;
+    justify-content: center;
+  }
+}
