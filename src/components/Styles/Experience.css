@@ -1,0 +1,12 @@
+.cardGlass {
+  background: rgba(255, 255, 255, 0.1); /* Make sure this is semi-transparent */
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  box-shadow: 0 0 0.5em rgba(117, 115, 115, 0.5);
+  color: rgb(237, 216, 119);
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
