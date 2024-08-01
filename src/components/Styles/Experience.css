@@ -1,5 +1,6 @@
-.cardGlass {
-  background: rgba(255, 255, 255, 0.1); /* Make sure this is semi-transparent */
+.card-glass {
+  position: relative; /* Position relative for the pseudo-element */
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 15px;
   backdrop-filter: blur(5px);
@@ -9,4 +10,25 @@
   margin: 30px;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* Ensure pseudo-element does not overflow */
+}
+
+.card-glass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ignore mouse events */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 80%);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform: scale(0);
+  opacity: 0;
+  z-index: 1;
+}
+
+.card-glass.glow-active::before {
+  transform: scale(1);
+  opacity: 1;
 }
