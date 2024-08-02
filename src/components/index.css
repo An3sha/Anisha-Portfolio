@@ -24,11 +24,12 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-height: 100vh;
 }
 
 .header {
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   display: flex;
   gap: 24px;
@@ -53,11 +54,19 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 20%;
-  margin-top: 10px;
-  min-height: 100vh;
-  margin-bottom: 20px;
+  gap: 40px;
+  margin-top: 40px;
+  /* min-height: 100vh; */
+  /* margin-bottom: 20px; */
 }
 
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  margin-top: 10px;
+}
 .profilePic {
   margin-top: 10px;
   border-radius: 25px;
@@ -72,8 +81,58 @@ body {
   flex-direction: row;
   gap: 60px;
   align-items: center;
-  margin-top: 10px;
-  text-align: center;
+  margin-top: 15%;
+  text-align: left;
+}
+
+.homeBox {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  margin-top: "20px";
+  text-align: left;
+}
+
+.icons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding: 10px 0;
+  bottom: 0;
+
+}
+
+/* .button {
+  background-color: rgb(2, 8, 0) !important;
+  border-radius: 50px !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important; */
+/* box-shadow: 0 0 0.5em rgba(117, 115, 115, 0.5) !important; */
+/* } */
+.spotify:hover {
+  border-radius: 50px !important;
+  background-color: rgb(10, 20, 0) !important;
+  box-shadow: 0 0 0.8em rgba(78, 159, 23, 0.7) !important;
+}
+
+.twitter:hover {
+  background-color: rgb(10, 20, 0) !important;
+  box-shadow: 0 0 0.8em rgba(46, 112, 179, 0.7) !important;
+}
+
+.github:hover {
+  background-color: rgb(10, 20, 0) !important;
+  box-shadow: 0 0 0.8em rgba(208, 224, 241, 0.7) !important;
+}
+
+.linkedIn:hover {
+  background-color: rgb(10, 20, 0) !important;
+  box-shadow: 0 0 0.8em rgba(29, 55, 171, 0.7) !important;
+}
+
+.email:hover {
+  background-color: rgb(10, 20, 0) !important;
+  box-shadow: 0 0 0.8em rgba(171, 29, 29, 0.7) !important;
 }
 
 /* RESPONSIVE */
@@ -110,6 +169,7 @@ body {
 }
 
 @media (max-width: 480px) {
+  
   .header .MuiTypography-root {
     font-size: 12px; /* Even smaller font size for small screens */
   }
@@ -122,11 +182,21 @@ body {
 
   .content {
     flex-direction: column;
-    padding: 10%;
-    margin-top: 50px;
-    /* margin-bottom: 70px; */
-    /* height: calc(100% - 60px); Adjust based on header height */
   }
+
+  .homeContent {
+    gap: 20px;
+    align-items: center;
+  }
+
+  .icons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  padding: 10px 0;
+  margin-top: 30px;
+
+}
 
   .profilePic {
     height: 50%;
@@ -135,6 +205,16 @@ body {
 
   .aboutBox {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .homeBox {
+    flex-direction: column;
+    text-align: center;
+    margin-top: "5px";
+  }
+  .mobileView {
+    text-align: center;
     align-items: center;
     justify-content: center;
   }

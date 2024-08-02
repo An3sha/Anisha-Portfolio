@@ -25,11 +25,11 @@ export default function Header() {
           Project
         </Typography>
       </Link>
-      <Link to="/social" style={{ textDecoration: 'underline' }}>
-        <Typography color="white" marginTop="20px">
-          Social
-        </Typography>
-      </Link>
+      {/* <Link to="/social" style={{ textDecoration: 'underline' }}> */}
+        {/* <Typography color="white" marginTop="20px"> */}
+          {/* Social */}
+        {/* </Typography> */}
+      {/* </Link> */}
     </Box>
   );
 }
