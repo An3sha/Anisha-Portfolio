@@ -56,8 +56,8 @@ body {
   padding: 0 20%;
   gap: 40px;
   margin-top: 40px;
-  /* min-height: 100vh; */
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
+
 }
 
 .homeContent {
@@ -99,7 +99,6 @@ body {
   gap: 24px;
   justify-content: center;
   padding: 10px 0;
-  bottom: 0;
 
 }
 
@@ -109,6 +108,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.35) !important; */
 /* box-shadow: 0 0 0.5em rgba(117, 115, 115, 0.5) !important; */
 /* } */
+
 .spotify:hover {
   border-radius: 50px !important;
   background-color: rgb(10, 20, 0) !important;
@@ -146,20 +146,16 @@ body {
 
 @media (max-width: 768px) {
   .header .MuiTypography-root {
-    font-size: 14px; /* Smaller font size for smaller screens */
+    font-size: 14px; 
   }
 
   .header {
-    /* flex-direction: row; */
     gap: 15px;
     padding: 15px;
   }
 
   .content {
     padding: 10%;
-    /* flex-direction: row;
-      margin-top: 30px; */
-    /* height: calc(100% - 60px); Adjust based on header height */
   }
 
   .profilePic {
@@ -169,19 +165,22 @@ body {
 }
 
 @media (max-width: 480px) {
-  
   .header .MuiTypography-root {
-    font-size: 12px; /* Even smaller font size for small screens */
+    font-size: 14px; 
   }
 
   .header {
     padding: 10px;
-    gap: 10px;
-    font-size: 8px;
+    gap: 14px;
+    margin-top: 20px;
   }
 
   .content {
     flex-direction: column;
+    padding: 0 5%;
+    gap: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .homeContent {
@@ -190,13 +189,12 @@ body {
   }
 
   .icons {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  padding: 10px 0;
-  margin-top: 30px;
-
-}
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 30%;
+  }
 
   .profilePic {
     height: 50%;
@@ -211,7 +209,6 @@ body {
   .homeBox {
     flex-direction: column;
     text-align: center;
-    margin-top: "5px";
   }
   .mobileView {
     text-align: center;

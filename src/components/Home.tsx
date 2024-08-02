@@ -7,10 +7,11 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
+import { SvgIconProps } from "@mui/material/SvgIcon";
 // import TwinklingStars from "./TwinklingStars";
 
 export default function Home() {
-  const SpotifyIcon = (props) => (
+  const SpotifyIcon = (props: SvgIconProps) => (
     <SvgIcon {...props} viewBox="0 0 496 512">
       <path
         fill="#21750a"
@@ -49,8 +50,7 @@ export default function Home() {
         <Box className="content">
           <FractalTree />
           <Box className="homeBox">
-            <Box className="homeContent"
-             
+            <Box className="homeContent"       
             >
               <Typography color="bisque" fontSize="30px">
                 hi, i am anisha{" "}
