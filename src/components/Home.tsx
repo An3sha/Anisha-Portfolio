@@ -52,7 +52,7 @@ export default function Home() {
           <Box className="homeBox">
             <Box className="homeContent"       
             >
-              <Typography color="bisque" fontSize="30px">
+              <Typography color="bisque" className="intro-text">
                 hi, i am anisha{" "}
                 <img
                   src="https://emojis.slackmojis.com/emojis/images/1536351075/4594/blob-wave.gif"
@@ -62,7 +62,7 @@ export default function Home() {
               </Typography>
               <FadeInSection>
                 <Typography color="darkgrey" textAlign="center">
-                  I am currently a Frontend Engineer at Ernest and have
+                  I am currently a Software Developer at Ernest and have
                   previously interned at Microsoft. I had the opportunity to be
                   a MITACS Globalink Research Internship Scholar and also served
                   as a visiting research scholar at the University of Windsor,

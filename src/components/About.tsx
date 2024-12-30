@@ -1,7 +1,7 @@
 import "./index.css";
 import Header from "./Header";
 import { Box, Grid, Typography } from "@mui/material";
-import Anisha from "../assests/Anisha.jpg";
+import Anisha from "../assests/Anisha.jpeg";
 import { useEffect, useRef } from "react";
 import FadeInSection from "./FadeInSection";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
@@ -42,10 +42,16 @@ export default function About() {
               {/* <Typography fontSize="40px">🐝 🍄 🐙 🪼 🌱</Typography> */}
 
               <Typography color="darkgrey">
-                I'm a software engineer from Delhi, India. I watch anime and
-                draw stuff. I'm fascinated by developing innovative frontend
-                solutions and intersection of autonomous systems. I’m currently
-                spending my time learning GO.
+                Hey there! I’m a passionate Software Engineer,
+                who’s all about turning ideas into sleek, interactive web
+                experiences. While I’m currently leveling up my
+                backend game with GO (because who doesn’t love a good
+                challenge?), my heart belongs to frontend technologies like
+                React.js, TypeScript, and Material-UI, where I get to play with
+                code and bring digital magic to life. When I’m not immersed in
+                code, you’ll find me binge-watching anime or sketching out new
+                design ideas. 
+                Let’s create something epic together! 🎨 💻 🚀
               </Typography>
               <Typography color="darkgrey">
                 Here are some technologies I have been working with:{" "}
@@ -56,40 +62,78 @@ export default function About() {
                 />
               </Typography>
               <FadeInSection>
-                <Grid container spacing={8} className="mobileView">
-                  <Grid item >
-                    <Typography color="darkgrey">
-                      <Box display="flex" alignItems="center">
-                        <ArrowRightIcon />
-                        React.js
-                      </Box>
-                    </Typography>
-                    <Typography color="darkgrey">
-                      <Box display="flex" alignItems="center">
-                        <ArrowRightIcon />
-                        Typescript
-                      </Box>
-                    </Typography>
-                     <Typography color="darkgrey">
-                      <Box display="flex" alignItems="center">
-                        <ArrowRightIcon />
-                        Javascript
-                      </Box>
-                    </Typography>
+                <Grid
+                  container
+                  justifyContent="center"
+                  spacing={4}
+                  className="tech-grid"
+                >
+                  <Grid item>
+                    <Box className="tech-column">
+                      <Typography color="darkgrey" className="tech-item">
+                        <Box display="flex" alignItems="center">
+                          <ArrowRightIcon />
+                          React.js
+                        </Box>
+                      </Typography>
+                      <Typography color="darkgrey" className="tech-item">
+                        <Box display="flex" alignItems="center">
+                          <ArrowRightIcon />
+                          Typescript
+                        </Box>
+                      </Typography>
+                      <Typography color="darkgrey" className="tech-item">
+                        <Box display="flex" alignItems="center">
+                          <ArrowRightIcon />
+                          Javascript
+                        </Box>
+                      </Typography>
+                    </Box>
                   </Grid>
-                  <Grid item spacing={8} >
-                     <Typography color="darkgrey">
-                      <Box display="flex" alignItems="center">
-                        <ArrowRightIcon />
-                        C++
-                      </Box>
-                    </Typography>
-                     <Typography color="darkgrey">
-                      <Box display="flex" alignItems="center">
-                        <ArrowRightIcon />
-                        Python
-                      </Box>
-                    </Typography>
+
+                  <Grid item>
+                    <Box className="tech-column">
+                      <Typography color="darkgrey" className="tech-item">
+                        <Box display="flex" alignItems="center">
+                          <ArrowRightIcon />
+                          RESTful APIs
+                        </Box>
+                      </Typography>
+                      <Typography color="darkgrey" className="tech-item">
+                        <Box display="flex" alignItems="center">
+                          <ArrowRightIcon />
+                          Redux
+                        </Box>
+                      </Typography>
+                      <Typography color="darkgrey" className="tech-item">
+                        <Box display="flex" alignItems="center">
+                          <ArrowRightIcon />
+                          Next.js
+                        </Box>
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid item>
+                    <Box className="tech-column">
+                      <Typography color="darkgrey" className="tech-item">
+                        <Box display="flex" alignItems="center">
+                          <ArrowRightIcon />
+                          C/C++
+                        </Box>
+                      </Typography>
+                      <Typography color="darkgrey" className="tech-item">
+                        <Box display="flex" alignItems="center">
+                          <ArrowRightIcon />
+                          Python
+                        </Box>
+                      </Typography>
+                      <Typography color="darkgrey" className="tech-item">
+                        <Box display="flex" alignItems="center">
+                          <ArrowRightIcon />
+                          SQL
+                        </Box>
+                      </Typography>
+                    </Box>
                   </Grid>
                 </Grid>
               </FadeInSection>

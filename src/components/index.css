@@ -29,12 +29,10 @@ body {
 
 .header {
   width: 100%;
-  /* position: fixed; */
-  top: 0;
   display: flex;
-  gap: 24px;
+  gap: clamp(12px, 2vw, 24px);
   justify-content: center;
-  padding: 10px 0;
+  padding: clamp(10px, 2vh, 20px) 0;
   z-index: 1000;
 }
 
@@ -43,9 +41,9 @@ body {
 }
 
 .header .MuiTypography-root {
-  font-size: 16px;
+  font-size: clamp(20px, 2.5vw, 18px);
   color: rgb(255, 255, 255);
-  margin-top: 20px;
+  margin-top: clamp(12px, 2.5vh, 22px);
 }
 
 .content {
@@ -53,169 +51,176 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 20%;
-  gap: 40px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-
+  padding: 0 clamp(20px, 5vw, 20%);
+  gap: clamp(20px, 4vh, 40px);
+  margin: clamp(20px, 4vh, 40px) 0;
+  width: 100%;
+  max-width: 1400px;
 }
 
 .homeContent {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: clamp(20px, 4vh, 40px);
   align-items: center;
-  margin-top: 10px;
+  margin-top: clamp(10px, 2vh, 20px);
+  width: 100%;
 }
+
+.intro-text {
+  font-size: clamp(24px, 4vw, 36px) !important;
+  margin-bottom: clamp(10px, 2vh, 20px);
+}
+
+.homeContent .MuiTypography-root {
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
 .profilePic {
-  margin-top: 10px;
+  margin-top: clamp(10px, 2vh, 20px);
   border-radius: 25px;
   border: 1px solid rgb(247, 244, 244);
   box-shadow: 0 0 6px rgb(161, 158, 158);
-  height: 300px;
   width: 300px;
+  height: 400px;
+  object-fit: cover;
 }
 
 .aboutBox {
   display: flex;
-  flex-direction: row;
-  gap: 60px;
+  gap: clamp(30px, 5vw, 60px);
   align-items: center;
-  margin-top: 15%;
-  text-align: left;
+  justify-content: center;
+  margin-top: 10vh;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.aboutBox .MuiTypography-root {
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
+.tech-grid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tech-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(14px, 2vw, 16px);
 }
 
 .homeBox {
   display: flex;
-  flex-direction: row;
-  gap: 60px;
+  gap: clamp(30px, 5vw, 60px);
   align-items: center;
-  margin-top: "20px";
+  margin-top: clamp(20px, 4vh, 40px);
   text-align: left;
+  width: 100%;
 }
 
 .icons {
   display: flex;
-  gap: 24px;
+  gap: clamp(16px, 3vw, 32px);
   justify-content: center;
-  padding: 10px 0;
-
+  padding: clamp(15px, 2.5vh, 25px) 0;
+  flex-wrap: wrap;
 }
 
-/* .button {
-  background-color: rgb(2, 8, 0) !important;
-  border-radius: 50px !important;
-  border: 1px solid rgba(255, 255, 255, 0.35) !important; */
-/* box-shadow: 0 0 0.5em rgba(117, 115, 115, 0.5) !important; */
-/* } */
+.icons svg {
+  width: clamp(24px, 4vw, 32px);
+  height: clamp(24px, 4vw, 32px);
+}
 
-.spotify:hover {
+.spotify:hover,
+.twitter:hover,
+.github:hover,
+.linkedIn:hover,
+.email:hover {
   border-radius: 50px !important;
   background-color: rgb(10, 20, 0) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.spotify:hover {
   box-shadow: 0 0 0.8em rgba(78, 159, 23, 0.7) !important;
 }
 
 .twitter:hover {
-  background-color: rgb(10, 20, 0) !important;
   box-shadow: 0 0 0.8em rgba(46, 112, 179, 0.7) !important;
 }
 
 .github:hover {
-  background-color: rgb(10, 20, 0) !important;
   box-shadow: 0 0 0.8em rgba(208, 224, 241, 0.7) !important;
 }
 
 .linkedIn:hover {
-  background-color: rgb(10, 20, 0) !important;
   box-shadow: 0 0 0.8em rgba(29, 55, 171, 0.7) !important;
 }
 
 .email:hover {
-  background-color: rgb(10, 20, 0) !important;
   box-shadow: 0 0 0.8em rgba(171, 29, 29, 0.7) !important;
 }
 
-/* RESPONSIVE */
-
+/* Responsive Breakpoints */
 @media (max-width: 1024px) {
-  .profilePic {
-    height: 250px;
-    width: 250px;
+  .content {
+    padding: 0 5%;
   }
 }
 
 @media (max-width: 768px) {
-  .header .MuiTypography-root {
-    font-size: 14px; 
-  }
-
-  .header {
-    gap: 15px;
-    padding: 15px;
-  }
-
-  .content {
-    padding: 10%;
-  }
-
-  .profilePic {
-    height: 200px;
-    width: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header .MuiTypography-root {
-    font-size: 14px; 
-  }
-
-  .header {
-    padding: 10px;
-    gap: 14px;
-    margin-top: 20px;
-  }
-
-  .content {
-    flex-direction: column;
-    padding: 0 5%;
-    gap: 40px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-
-  .homeContent {
-    gap: 20px;
-    align-items: center;
-  }
-
-  .icons {
-    display: flex;
-    gap: 14px;
-    justify-content: center;
-    padding: 10px 0;
-    margin-top: 30%;
-  }
-
-  .profilePic {
-    height: 50%;
-    width: 50%;
-  }
-
-  .aboutBox {
-    flex-direction: column;
-    text-align: center;
-  }
-
+  .aboutBox,
   .homeBox {
     flex-direction: column;
     text-align: center;
   }
+
   .mobileView {
-    text-align: center;
-    align-items: center;
     justify-content: center;
   }
-  .aboutBox .MuiTypography-root {
-    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .icons {
+    margin-top: clamp(20px, 4vh, 30px);
   }
+
+  .aboutBox .MuiTypography-root,
+  .homeContent .MuiTypography-root {
+    font-size: clamp(12px, 3vw, 14px);
+  }
+
+  .mobileView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+    .tech-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tech-column {
+    align-items: center;
+  }
+
+  .header .MuiTypography-root {
+  font-size: clamp(14px, 2.5vw, 12px);
+  margin-top: clamp(12px, 2.5vh, 22px);
+}
+
 }

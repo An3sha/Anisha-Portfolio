@@ -80,37 +80,29 @@ const Experience: React.FC = () => {
         <Box className="content">
           <Card className="card-glass">
             <CardContent>
-              <Box marginBottom="30px">
+              <Box marginBottom="40px">
                 <Grid
                   container
                   justifyContent="space-between"
                   color="rgb(237, 216, 119)"
                 >
-                  <Typography fontSize="20px" fontWeight="500">
+                  <Typography className="company-name">
                     {name}
                   </Typography>
-                  <Typography fontSize="16px" fontWeight="400">
+                  <Typography className="company-location">
                     {location}
                   </Typography>
                 </Grid>
                 <Grid
                   container
                   justifyContent="space-between"
-                  marginTop="10px"
+                  marginTop="15px"
                   color="rgb(237, 216, 119)"
                 >
-                  <Typography
-                    fontSize="16px"
-                    fontWeight="400"
-                    fontStyle="italic"
-                  >
+                  <Typography className="role-date">
                     {role}
                   </Typography>
-                  <Typography
-                    fontSize="16px"
-                    fontWeight="400"
-                    fontStyle="italic"
-                  >
+                  <Typography className="role-date">
                     {date}
                   </Typography>
                 </Grid>
@@ -118,13 +110,13 @@ const Experience: React.FC = () => {
                 <Grid
                   container
                   direction="column"
-                  marginTop="40px"
-                  gap="20px"
+                  marginTop="50px"
+                  gap="25px"
                   color="rgb(205, 205, 205)"
                 >
                   {workContent.map((content, index) => (
                     <FadeInSection key={`step-${activeStep}-content-${index}`}>
-                      <Typography>{content}</Typography>
+                      <Typography className="work-content">{content}</Typography>
                     </FadeInSection>
                   ))}
                 </Grid>
