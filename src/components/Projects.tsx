@@ -26,7 +26,7 @@ const projects = [
      "A modern, interactive web application that generates beautiful resumes from GitHub profiles. Built with React, TypeScript, and Chart.js.",
     technologies: ["React", "TypeScript", "Chart.js","Axios", "date-fns", "Framer Motion", "Lucide Icons", "TailwindCSS", "Vite"],
     githubUrl: "https://github.com/An3sha/Modern-Github-Resume",
-    liveUrl: "modern-github-resume.vercel.app",
+    liveUrl: "https://modern-github-resume.vercel.app/",
   },
   {
     title: "ChronoBloom",
@@ -34,7 +34,7 @@ const projects = [
       "A web app that helps users manage time using the Pomodoro Technique, which alternates focused work sessions with short breaks. It aims to boost productivity and maintain focus by structuring tasks effectively. ",
        technologies: ["React", "TypeScript", "TailwindCSS", "Vite"],
     githubUrl: "https://github.com/An3sha/ChronoBloom",
-    liveUrl: "chrono-bloom.vercel.app",
+    liveUrl: "https://chrono-bloom.vercel.app/",
   },
   {
     title: "CMS Story",
@@ -50,7 +50,7 @@ const projects = [
       "This project involves creating a grid component for KPI cards with toggleable view and edit modes. Users can add new cards via "+" icons, which start in edit mode. The layout adapts to screen width, ensuring a maximum of three cards per row and a centered container.",
        technologies: ["React", "TypeScript", "CSS", "Highcharts"],
     githubUrl: "https://github.com/An3sha/Metrix-Tiles",
-    liveUrl: "metrictile.netlify.app/",
+    liveUrl: "https://metrictile.netlify.app/",
   },
    {
     title: "Lyrical",
@@ -74,7 +74,7 @@ const projects = [
       "Hey! I'm making this for all the anime lovers. It includes anime series and movies of all genres that I have watched till now",
        technologies: ["Github"],
     githubUrl: "https://github.com/An3sha/Anime-List",
-    liveUrl: "an3sha.github.io/Anime-List/",
+    liveUrl: "https://an3sha.github.io/Anime-List/",
   },
 ];
 
