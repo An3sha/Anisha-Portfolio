@@ -112,15 +112,12 @@ export default function About() {
                   color="darkgrey"
                   className="tech-header"
                   sx={{
-                    fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: { xs: 'center', md: 'flex-start' },
-                    gap: '8px',
-                    marginBottom: '24px'
+                    gap: '8px'
                   }}
                 >
-                  Here are some technologies I have been working with{" "}
+                  Here are some technologies I have been working with
                   <img
                     src="https://cultofthepartyparrot.com/parrots/hd/laptop_parrot.gif"
                     width="30"
