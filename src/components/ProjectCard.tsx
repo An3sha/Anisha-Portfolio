@@ -1,6 +1,6 @@
-
 import { Github, ExternalLink } from 'lucide-react';
 import './Styles/Project.css';
+import { useRef, useEffect } from 'react';
 
 interface ProjectCardProps {
   title: string;
@@ -17,10 +17,30 @@ export default function ProjectCard({
   githubUrl, 
   liveUrl, 
 }: ProjectCardProps) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
+      card.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
+    };
+
+    card.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      card.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
-    <div className="project-card">
- 
-      
+    <div className="project-card" ref={cardRef}>
       <div className="project-content">
         <h3 className="project-title">{title}</h3>
         <p className="project-description">{description}</p>

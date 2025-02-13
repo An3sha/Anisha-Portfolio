@@ -44,18 +44,23 @@ body {
   font-size: clamp(20px, 2.5vw, 18px);
   color: rgb(255, 255, 255);
   margin-top: clamp(12px, 2.5vh, 22px);
+  transition: color 0.3s ease;
+}
+
+.header .active-link .MuiTypography-root {
+  color: rgb(237, 216, 119) !important;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 clamp(20px, 5vw, 20%);
-  gap: clamp(20px, 4vh, 40px);
-  margin: clamp(20px, 4vh, 40px) 0;
-  width: 100%;
-  max-width: 1400px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: clamp(20px, 4vw, 40px) clamp(12px, 3vw, 24px) !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  min-height: calc(100vh - 80px) !important; /* Adjust based on header height */
 }
 
 .homeContent {
@@ -76,49 +81,103 @@ body {
   font-size: clamp(16px, 2.5vw, 20px);
 }
 
-.profilePic {
-  margin-top: clamp(10px, 2vh, 20px);
-  border-radius: 25px;
-  border: 1px solid rgb(247, 244, 244);
-  box-shadow: 0 0 6px rgb(161, 158, 158);
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
-}
-
 .aboutBox {
   display: flex;
-  gap: clamp(30px, 5vw, 60px);
-  align-items: center;
-  justify-content: center;
-  margin-top: 10vh;
-  text-align: center;
+  flex-direction: row;
+  gap: 60px;
+  align-items: flex-start;
   width: 100%;
   max-width: 1200px;
+  padding: 40px 0;
 }
 
-.aboutBox .MuiTypography-root {
-  font-size: clamp(16px, 2.5vw, 20px);
+.profile-container {
+  width: 350px;
+  flex-shrink: 0;
+  border-radius: 26px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(239, 228, 112, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile-container:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(238, 229, 128, 0.2);
+  transform: translateY(-5px);
+}
+
+.profilePic {
+  border-radius: 26px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  /* margin-bottom: 15px; */
+}
+
+.about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Prevents flex item from overflowing */
+}
+
+.about-text {
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0.3px;
+}
+
+.technologies-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tech-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
 }
 
 .tech-grid {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 32px !important;
+  width: 100% !important;
+  margin-top: 24px !important;
 }
 
 .tech-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
 }
 
 .tech-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: clamp(14px, 2vw, 16px);
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  color: darkgrey !important;
+  font-size: 1rem !important;
+  transition: transform 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.tech-item:hover {
+  transform: translateX(8px) !important;
+  color: rgb(237, 216, 119) !important;
+}
+
+.tech-arrow {
+  color: #666 !important;
+  font-size: 1.6rem !important;
 }
 
 .homeBox {
@@ -190,6 +249,19 @@ body {
   .mobileView {
     justify-content: center;
   }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .tech-column {
+    gap: 16px !important;
+  }
+
+  .tech-item {
+    font-size: 0.9rem !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -209,13 +281,21 @@ body {
     gap: 10px;
   }
 
-    .tech-grid {
-    flex-direction: column;
-    align-items: center;
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
   }
   
   .tech-column {
     align-items: center;
+  }
+
+  .tech-item {
+    font-size: 0.8rem !important;
+  }
+
+  .tech-arrow {
+    font-size: 1rem !important;
   }
 
   .header .MuiTypography-root {
@@ -223,4 +303,56 @@ body {
   margin-top: clamp(12px, 2.5vh, 22px);
 }
 
+}
+
+@media (max-width: 900px) {
+  .aboutBox {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 20px 0;
+  }
+
+  .profile-container {
+    width: 280px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .tech-header {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 16px 8px !important;
+  }
+
+  .about-text {
+    font-size: 1rem !important;
+  }
+
+  .tech-item {
+    font-size: 0.85rem !important;
+  }
+
+  .aboutBox {
+    padding: 10px 0;
+  }
+
+  .profile-container {
+    width: 240px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .tech-column {
+    gap: 12px !important;
+  }
 }

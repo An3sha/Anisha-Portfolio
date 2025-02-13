@@ -6,21 +6,43 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: -1; /* Ensure it is behind other content */
-  background: rgba(0, 0, 0, 0.9); /* Dark background to see the stars better */
+  z-index: 0; /* Changed from -1 to be more visible */
 }
 
 .template {
   opacity: 0.8;
-  fill: white; /* Ensure the stars are visible */
+  fill: #FFD700; /* Changed to gold/yellow color */
+  filter: drop-shadow(0 0 1px rgba(255, 215, 0, 0.5)); /* Changed glow to yellow */
 }
 
 .twinkle {
-  animation: twinkle 1s infinite;
+  animation: twinkle 3s infinite ease-in-out;
 }
 
 @keyframes twinkle {
-  0% { opacity: 0.5; }
-  50% { opacity: 1; }
-  100% { opacity: 0.5; }
+  0% { 
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% { 
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+}
+
+/* Different animation durations for variety */
+.twinkle:nth-child(2n) {
+  animation-duration: 4s;
+}
+
+.twinkle:nth-child(3n) {
+  animation-duration: 5s;
+}
+
+.twinkle:nth-child(5n) {
+  animation-duration: 6s;
 }

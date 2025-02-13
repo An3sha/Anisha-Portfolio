@@ -26,7 +26,8 @@ const projects = [
      "A modern, interactive web application that generates beautiful resumes from GitHub profiles. Built with React, TypeScript, and Chart.js.",
     technologies: ["React", "TypeScript", "Chart.js","Axios", "date-fns", "Framer Motion", "Lucide Icons", "TailwindCSS", "Vite"],
     githubUrl: "https://github.com/An3sha/Modern-Github-Resume",
-    liveUrl: "https://modern-github-resume.vercel.app/",
+    liveUrl: "https://modern-github-resume.vercel.app/"
+
   },
   {
     title: "ChronoBloom",

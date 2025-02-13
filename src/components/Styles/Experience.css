@@ -1,34 +1,120 @@
 .card-glass {
   position: relative !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 15px !important;
-  backdrop-filter: blur(5px) !important;
-  padding: 20px !important; /* Increased padding */
-  box-shadow: 0 0 0.5em rgba(117, 115, 115, 0.5) !important;
-  margin: 10px !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  padding: clamp(16px, 3vw, 24px) !important;
+  box-shadow: 
+    0 4px 24px -1px rgba(0, 0, 0, 0.2) !important,
+    0 0 16px -1px rgba(255, 255, 255, 0.05) inset !important;
+  margin: clamp(8px, 1.5vw, 16px) !important;
   display: flex !important;
   flex-direction: column !important;
   overflow: hidden !important;
+  width: 100% !important;
+  height: min(600px, 80vh) !important;
+}   
+
+.content-wrapper {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow-y: auto !important;
+  margin-bottom: 16px !important;
+  padding-right: 12px !important;
+  min-height: 0 !important;
+}
+
+.company-info {
+  flex-shrink: 0 !important;
+  margin-bottom: 24px !important;
+}
+
+.work-content-container {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-height: min-content !important;
+}
+
+.content-wrapper::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.content-wrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 2px !important;
+}
+
+.content-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 2px !important;
+}
+
+.content-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
 }
 
 .company-name {
-  font-size: clamp(22px, 3vw, 28px) !important;
+  font-size: clamp(18px, 2.5vw, 24px) !important;
   font-weight: 500 !important;
+  line-height: 1.3 !important;
 }
 
 .company-location {
-  font-size: clamp(16px, 2.5vw, 20px) !important;
+  font-size: clamp(13px, 1.8vw, 16px) !important;
   font-weight: 400 !important;
+  text-align: right !important;
+  line-height: 1.4 !important;
 }
 
 .role-date {
-  font-size: clamp(16px, 2.5vw, 20px) !important;
+  font-size: clamp(13px, 1.8vw, 16px) !important;
   font-weight: 400 !important;
   font-style: italic !important;
+  line-height: 1.4 !important;
 }
 
 .work-content {
-  font-size: clamp(16px, 2.5vw, 18px) !important;
+  font-size: clamp(13px, 1.8vw, 16px) !important;
   line-height: 1.6 !important;
+  padding-left: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+@media (max-width: 600px) {
+  .card-glass {
+    height: min(600px, 85vh) !important;
+    margin: 8px !important;
+    padding: 16px !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+  }
+
+  .company-info-grid {
+    flex-direction: column !important;
+    gap: 4px !important;
+    align-items: flex-start !important;
+  }
+  
+  .company-location {
+    text-align: left !important;
+  }
+
+  .work-content {
+    padding-left: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .content-wrapper {
+    padding-right: 8px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-glass {
+    padding: 12px !important;
+  }
 }

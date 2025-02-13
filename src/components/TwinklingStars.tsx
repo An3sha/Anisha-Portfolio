@@ -2,51 +2,38 @@
 import React, { useEffect } from "react";
 import "./Styles/TwinklingStars.css";
 
-const TwinklingStars: React.FC = () => {
+const TwinklingStars = () => {
   useEffect(() => {
-    const generateTwinkleStar = () => {
-      const twinkleStarTemplate = document.getElementById("twinkle-star");
-      if (!twinkleStarTemplate) return;
-
-      const twinkleStar = twinkleStarTemplate.cloneNode(true) as HTMLElement;
-      twinkleStar.style.position = "absolute";
-      twinkleStar.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
-      twinkleStar.style.top = Math.floor(Math.random() * (window.innerHeight / 3)) + "px";
-      twinkleStar.style.width = window.innerWidth < 768 ? Math.floor(Math.random() * (15 - 7.5 + 1) + 7.5) + "px" : Math.floor(Math.random() * (30 - 15 + 1) + 15) + "px";
-      twinkleStar.style.height = twinkleStar.style.width;
-      twinkleStar.classList.add("twinkle");
-      const galaxy = document.getElementById("galaxy");
-      if (galaxy) {
-        galaxy.appendChild(twinkleStar);
-      }
-
-      console.log("Twinkle star added at:", twinkleStar.style.left, twinkleStar.style.top); // Debug line
-
-      setTimeout(() => {
-        twinkleStar.remove();
-      }, 1500);
+    const createStar = () => {
+      const star = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      star.setAttribute("class", "template twinkle");
+      star.setAttribute("r", (Math.random() * 0.8 + 0.2).toString());
+      star.setAttribute("cx", (Math.random() * 100).toString() + "%");
+      star.setAttribute("cy", (Math.random() * 100).toString() + "%");
+      return star;
     };
 
-    const interval = setInterval(generateTwinkleStar, 750);
-    return () => clearInterval(interval); // Clean up interval on component unmount
+    const galaxy = document.getElementById("galaxy");
+    if (galaxy) {
+      for (let i = 0; i < 150; i++) {
+        galaxy.appendChild(createStar());
+      }
+
+      return () => {
+        galaxy.innerHTML = '';
+      };
+    }
   }, []);
 
   return (
-    <div>
-      <div id="galaxy"></div>
-      <svg 
-        id="twinkle-star" 
-        className="template" 
-        width="10" 
-        height="10" 
-        viewBox="0 0 10 10" 
-        fill="none" 
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ display: 'none' }} // Hide the template SVG
-      >
-        <circle cx="5" cy="5" r="2" fill="white"/>
-      </svg>
-    </div>
+    <svg id="galaxy" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="starGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+          <stop offset="0%" stopColor="#FFD700" stopOpacity="1"/>
+          <stop offset="100%" stopColor="#FFD700" stopOpacity="0"/>
+        </radialGradient>
+      </defs>
+    </svg>
   );
 };
 
