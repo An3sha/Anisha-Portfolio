@@ -11,8 +11,8 @@ const companies = [
   {
     name: "Ernest",
     location: "New York, United States (Remote)",
-    role: "Frontend Developer",
-    date: "Feb 2024 - Present",
+    role: "Software Developer",
+    date: "Aug 2023 - Present",
     workContent: [
       "◦ Design System Development: Built a scalable design system to standardize UI components, ensuring consistency across applications.",
       "◦ Performance Optimization: Integrated React Query (state management), reducing API call times by 40%, enhancing performance and responsiveness.",
@@ -25,8 +25,8 @@ const companies = [
   {
     name: "Quicket Solutions",
     location: "Gurugram, Haryana",
-    role: "Frontend Developer",
-    date: " Jan 2023 - Feb 2024",
+    role: "Software Developer Intern",
+    date: " Jan 2023 - July 2023",
     workContent: [
      "◦ Stickney Platform Development: Led development of a sticker creation platform, improving task completion by 15%.",
      "◦ UI/UX Design: Delivered UI/UX redesigns, increasing user satisfaction by 20%.",
