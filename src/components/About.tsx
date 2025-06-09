@@ -1,7 +1,8 @@
 import "./index.css";
 import Header from "./Header";
 import { Box, Grid, Typography } from "@mui/material";
-import Anisha from "../assests/Anisha.jpeg";
+// import Anisha from "../assests/Anisha.jpeg";
+import Anisha from "../assests/me.jpg";
 import { useEffect, useRef } from "react";
 import FadeInSection from "./FadeInSection";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
