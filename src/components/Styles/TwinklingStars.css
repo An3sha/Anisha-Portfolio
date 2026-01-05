@@ -1,4 +1,7 @@
-/* TwinklingStars.css */
+/* ============================================
+   TWINKLING STARS - Background Animation
+   ============================================ */
+
 #galaxy {
   position: fixed;
   top: 0;
@@ -6,43 +9,51 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 0; /* Changed from -1 to be more visible */
+  z-index: 0;
 }
 
 .template {
-  opacity: 0.8;
-  fill: #FFD700; /* Changed to gold/yellow color */
-  filter: drop-shadow(0 0 1px rgba(255, 215, 0, 0.5)); /* Changed glow to yellow */
+  opacity: 0.6;
+  fill: var(--color-accent, rgb(237, 216, 119));
+  filter: drop-shadow(0 0 2px rgba(237, 216, 119, 0.3));
 }
 
 .twinkle {
-  animation: twinkle 3s infinite ease-in-out;
+  animation: twinkle 4s infinite ease-in-out;
 }
 
 @keyframes twinkle {
-  0% { 
-    opacity: 0.2;
-    transform: scale(0.8);
+  0% {
+    opacity: 0.15;
+    transform: scale(0.85);
   }
-  50% { 
-    opacity: 1;
-    transform: scale(1.2);
+  50% {
+    opacity: 0.8;
+    transform: scale(1.15);
   }
-  100% { 
-    opacity: 0.2;
-    transform: scale(0.8);
+  100% {
+    opacity: 0.15;
+    transform: scale(0.85);
   }
 }
 
-/* Different animation durations for variety */
+/* Staggered animation durations for organic feel */
 .twinkle:nth-child(2n) {
-  animation-duration: 4s;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
 }
 
 .twinkle:nth-child(3n) {
-  animation-duration: 5s;
+  animation-duration: 6s;
+  animation-delay: 1s;
 }
 
 .twinkle:nth-child(5n) {
-  animation-duration: 6s;
+  animation-duration: 7s;
+  animation-delay: 1.5s;
+}
+
+.twinkle:nth-child(7n) {
+  animation-duration: 4.5s;
+  animation-delay: 0.3s;
 }

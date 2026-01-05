@@ -92,8 +92,8 @@ const Experience: React.FC = () => {
         <Header />  
         <TwinklingStars />
         <Box className="content" sx={{ flex: 1, display: 'flex', alignItems: 'center' }}>
-          <Card className="card-glass">
-            <CardContent sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+          <Card className="card-glass" sx={{ backgroundColor: 'transparent' }}>
+            <CardContent sx={{ height: '100%', display: 'flex', flexDirection: 'column', backgroundColor: 'transparent' }}>
               <Box className="content-wrapper">
                 <Box className="company-info">
                   <Grid

@@ -9,8 +9,8 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import TwinklingStars from "./TwinklingStars";
 
 const techColumns = [
-  ['React.js', 'TypeScript', 'JavaScript'],
-  ['RESTful APIs', 'Redux', 'Next.js'],
+  ['React.js', 'TypeScript', 'JavaScript', 'Next.js'],
+  ['RESTful APIs', 'Redux', 'Next.js', 'TailwindCSS'],
   ['C/C++', 'Python', 'SQL']
 ];
 
@@ -49,9 +49,7 @@ export default function About() {
               className="profile-container"
               sx={{
                 position: 'relative',
-                width: { xs: '280px', sm: '320px', md: '350px' },
- 
-                padding: '20px',
+                width: { xs: '220px', sm: '240px', md: '260px' },
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center'
@@ -79,7 +77,7 @@ export default function About() {
               className="about-content"
               sx={{
                 textAlign: { xs: 'center', md: 'left' },
-                maxWidth: { xs: '100%', md: 'calc(100% - 410px)' }
+                maxWidth: { xs: '100%', md: 'calc(100% - 320px)' }
               }}
             >
               <Typography 
@@ -89,7 +87,7 @@ export default function About() {
                 sx={{
                   fontSize: { xs: '0.9rem', sm: '0.95rem', md: '1rem' },
                   lineHeight: '1.6',
-                  marginBottom: { xs: '20px', md: '24px' }
+                  
                 }}
               >
                 Hey there! I'm a Software Engineer with a strong passion for
@@ -109,14 +107,14 @@ export default function About() {
                 }}
               >
                 <Typography 
-                  variant="h6" 
-                  color="darkgrey"
-                  className="tech-header"
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px'
-                  }}
+                variant="body1" 
+                className="about-text"
+                color="darkgrey"
+                sx={{
+                  fontSize: { xs: '0.9rem', sm: '0.95rem', md: '1rem' },
+                  lineHeight: '1.6',
+                
+                }}
                 >
                   Here are some technologies I have been working with
                   <img

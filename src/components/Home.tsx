@@ -62,10 +62,10 @@ export default function Home() {
               </Typography>
               <FadeInSection>
                 <Typography color="darkgrey" textAlign="center">
-                  I am currently a Software Developer at <a href="https://moonkind.ai/" target="_blank" rel="noopener noreferrer" style={{ color: 'darkgrey', fontStyle: 'italic', textDecoration: 'underline' }}>Cleandirty.ai</a>, previously worked at <a href="https://www.joinernest.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'darkgrey', fontStyle: 'italic', textDecoration: 'underline' }}>Ernest</a> and have
+                  I am currently a Software Developer at <a href="https://moonkind.ai/" target="_blank" rel="noopener noreferrer">Cleandirty.ai</a>, previously worked at <a href="https://www.joinernest.com/" target="_blank" rel="noopener noreferrer">Ernest</a> and have
                   previously interned at Microsoft. I had the opportunity to be
-                  a MITACS Globalink Research Internship Scholar and also served
-                  as a visiting research scholar at the University of Windsor,
+                  a <a href="https://www.mitacs.ca/our-programs/globalink-research-internship-students/" target="_blank" rel="noopener noreferrer">MITACS</a> Globalink Research Internship Scholar and also served
+                  as a visiting research scholar at the <a href="https://www.uwindsor.ca/" target="_blank" rel="noopener noreferrer">University of Windsor</a>,
                   Canada, focusing on Driver Monitoring Systems. Outside work, I
                   also enjoy painting and watching football. GGMU!
                 </Typography>

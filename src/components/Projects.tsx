@@ -9,16 +9,16 @@ const projects = [
     description:
       "An AI-powered candidate search platform with multi-filter support, featuring a RAG-based chatbot for intelligent candidate Q&A and Anthropic-powered profile summarization and ranking.",
     technologies: ["React", "TypeScript", "TailwindCSS", "Supabase", "Langbase", "Anthropic"],
-    githubUrl: "https://github.com/An3sha/SkillMatch-AI", // add your link
-    liveUrl: "https://100-bjobs.vercel.app/",   // add your link
+    githubUrl: "https://github.com/An3sha/SkillMatch-AI",
+    liveUrl: "https://100-bjobs.vercel.app/",
   },
   {
     title: "AI Support Chat Widget",
     description:
       "An embeddable AI-powered chat widget deployable via a single script tag, featuring a flexible config system for custom themes and branding, plus voice capabilities including microphone input and text-to-speech.",
     technologies: ["React", "TypeScript", "Vite"],
-    githubUrl: "https://github.com/An3sha/sarvamai", // add your link
-    liveUrl: "https://sarvamai.vercel.app/",   // add your link
+    githubUrl: "https://github.com/An3sha/sarvamai",
+    liveUrl: "https://sarvamai.vercel.app/",
   },
    {
     title: "Function Chain Calculator App",
