@@ -10,7 +10,7 @@ const projects = [
       "An AI-powered candidate search platform with multi-filter support, featuring a RAG-based chatbot for intelligent candidate Q&A and Anthropic-powered profile summarization and ranking.",
     technologies: ["React", "TypeScript", "TailwindCSS", "Supabase", "Langbase", "Anthropic"],
     githubUrl: "https://github.com/An3sha/SkillMatch-AI", // add your link
-    liveUrl: "",   // add your link
+    liveUrl: "https://100-bjobs.vercel.app/",   // add your link
   },
   {
     title: "AI Support Chat Widget",
