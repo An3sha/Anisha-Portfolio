@@ -9,10 +9,22 @@ import TwinklingStars from "./TwinklingStars";
 
 const companies = [
   {
+    name: "Cleandirty.ai",
+    location: "Bangalore, Karnataka",
+    role: "Software Developer",
+    date: "January 2025 - Present",
+    workContent: [
+      "◦ Frontend Architecture: Designed and developed the entire frontend from scratch using ReactJS, Next.js, and TypeScript. Delivered responsive, accessible UIs for a seamless story writing, reading, and multimedia experience.",
+      "◦ AI & Core Feature Development:  Integrated DALL·E for image generation and Text-to-Speech APIs for audio narration. Engineered core features such as a custom story editor, sticky notes, embedded media, and smooth UI animations with Framer Motion.", 
+      "◦ Backend Engineering & Refactoring: Contributed to backend services built with Next.js (API routes). Rewrote the legacy story-reading platform (originally implemented by interns) into clean, modular, and maintainable code, reducing bugs and improving scalability.",
+      "◦ Performance, Authentication & Payments: Optimized rendering and media load times by 20%, leading to a 30% increase in user engagement. Implemented secure authentication with Supertokens and integrated Cashfree SDK for in-app payments.", 
+    ],
+  },
+  {
     name: "Ernest",
     location: "New York, United States (Remote)",
     role: "Software Developer",
-    date: "Aug 2023 - Present",
+    date: "June 2023 - January 2025",
     workContent: [
       "◦ Design System Development: Built a scalable design system to standardize UI components, ensuring consistency across applications.",
       "◦ Performance Optimization: Integrated React Query (state management), reducing API call times by 40%, enhancing performance and responsiveness.",
@@ -26,7 +38,7 @@ const companies = [
     name: "Quicket Solutions",
     location: "Gurugram, Haryana",
     role: "Software Developer Intern",
-    date: " Jan 2023 - July 2023",
+    date: " Jan 2023 - June 2023",
     workContent: [
      "◦ Stickney Platform Development: Led development of a sticker creation platform, improving task completion by 15%.",
      "◦ UI/UX Design: Delivered UI/UX redesigns, increasing user satisfaction by 20%.",

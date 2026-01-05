@@ -62,7 +62,7 @@ export default function Home() {
               </Typography>
               <FadeInSection>
                 <Typography color="darkgrey" textAlign="center">
-                  I am currently a Software Developer at Ernest and have
+                  I am currently a Software Developer at <a href="https://moonkind.ai/" target="_blank" rel="noopener noreferrer" style={{ color: 'darkgrey', fontStyle: 'italic', textDecoration: 'underline' }}>Cleandirty.ai</a>, previously worked at <a href="https://www.joinernest.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'darkgrey', fontStyle: 'italic', textDecoration: 'underline' }}>Ernest</a> and have
                   previously interned at Microsoft. I had the opportunity to be
                   a MITACS Globalink Research Internship Scholar and also served
                   as a visiting research scholar at the University of Windsor,
