@@ -103,13 +103,17 @@ const Experience: React.FC = () => {
                     className="company-info-grid"
                     color="rgb(237, 216, 119)"
                     spacing={1}
+                    sx={{
+                      flexDirection: { xs: 'column', sm: 'row' },
+                      alignItems: { xs: 'flex-start', sm: 'flex-start' }
+                    }}
                   >
-                    <Grid item>
+                    <Grid item xs={12} sm="auto">
                       <Typography className="company-name">
                         {name}
                       </Typography>
                     </Grid>
-                    <Grid item>
+                    <Grid item xs={12} sm="auto" sx={{ textAlign: { xs: 'left', sm: 'right' } }}>
                       <Typography className="company-location">
                         {location}
                       </Typography>
